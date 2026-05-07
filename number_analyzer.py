@@ -1,57 +1,57 @@
 def analyze_number(n):
-    # Node 1: Inisialisasi list hasil
+    # list hasil
     result = []
     
-    # Node 1 (lanjutan): Cek Positif
+    # node 1, untuk cek postitif gak
     if n > 0:
-        # Node 2
+        # node 2, hasilnya
         result.append("Positif")
-    # Node 3: Cek Negatif
+    # node 3, untuk cek negatif gak
     elif n < 0:
-        # Node 4
+        # node 4, hasilnya
         result.append("Negatif")
     else:
-        # Node 5
+        # node 5, hasilnya
         result.append("Nol")
         
-    # Node 6: Cek Genap/Ganjil
+    # node 6, untuk cek genap/ganjil
     if n % 2 == 0:
-        # Node 7
+        # node 7, hasilnya misal genap
         result.append("Genap")
     else:
-        # Node 8
+        # node 8, hasilnya ganjil
         result.append("Ganjil")
         
-    # Node 9: Cek Prima (Tahap 1: Kurang dari sama dengan 1)
+    # node 9, untuk cek prima(tahap 1: kurang dari sama dengan 1)
     is_prime = True
     if n <= 1:
-        # Node 10
+        # node 10
         is_prime = False
     else:
-        # Node 11: Inisialisasi pembagi (loop condition)
+        # node 11, inisialisasi pembagi
         i = 2
         while i * i <= n:
-            # Node 12: Cek sisa bagi
+            # node 12, cek sisa bagi
             if n % i == 0:
-                # Node 13: Ditemukan pembagi, bukan prima -> keluar loop
+                # node 13, ditemukan pembagi, bukan prima -> langsung keluar loop
                 is_prime = False
                 break
-            # Node 14: Increment pembagi
+            # node 14, increment pembagi
             i += 1
             
-    # Node 15: Evaluasi hasil pengecekan prima
+    # node 15, evaluasi hasil cek prima ato bukan
     if is_prime:
-        # Node 16
+        # node 16
         result.append("Prima")
     else:
-        # Node 17
+        # node 17
         result.append("Bukan Prima")
         
-    # Node 18: Kembalikan hasil
+    # node 18, kembalikan hasil
     return result
 
+# test cases
 if __name__ == "__main__":
-    # Test cases berdasarkan Independent Paths
     print("n = 0  ->", analyze_number(0))
     print("n = -3 ->", analyze_number(-3))
     print("n = -2 ->", analyze_number(-2))
